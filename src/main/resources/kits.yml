@@ -1,0 +1,5 @@
+Kits:
+  Test:
+    - STONE,1
+    - TORCH,16
+    - STONE_AXE,1

@@ -1,0 +1,14 @@
+de/framedev/speedcoding/main/Main.class
+de/framedev/speedcoding/commands/EconomyCMD.class
+de/framedev/speedcoding/commands/WorldCMD.class
+de/framedev/speedcoding/managers/KitCMD.class
+de/framedev/speedcoding/utils/Setup.class
+de/framedev/speedcoding/managers/VaultManager.class
+de/framedev/speedcoding/listeners/PlayerListeners.class
+de/framedev/speedcoding/managers/MultiWorldManager.class
+de/framedev/speedcoding/managers/VaultAPI.class
+de/framedev/speedcoding/commands/HomeCMD.class
+de/framedev/speedcoding/managers/LocationManager$LocationToJson.class
+de/framedev/speedcoding/managers/LocationManager.class
+de/framedev/speedcoding/managers/KitManager.class
+de/framedev/speedcoding/commands/ChatClearCMD.class

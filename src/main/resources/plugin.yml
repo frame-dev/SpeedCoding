@@ -1,0 +1,23 @@
+name: Speedcoding
+version: ${project.version}
+main: de.framedev.speedcoding.main.Main
+api-version: 1.13
+load: STARTUP
+softdepend:
+  - Vault
+
+commands:
+  mv:
+  chatclear:
+    aliases:
+      - cc
+      - clearchat
+  sethome:
+  home:
+  economy:
+    aliases:
+      - eco
+  balance:
+    aliases:
+      - bal
+  kits:
