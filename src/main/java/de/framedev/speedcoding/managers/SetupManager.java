@@ -1,4 +1,4 @@
-package de.framedev.speedcoding.utils;
+package de.framedev.speedcoding.managers;
 
 import de.framedev.speedcoding.commands.ChatClearCMD;
 import de.framedev.speedcoding.commands.EconomyCMD;
@@ -17,11 +17,11 @@ import de.framedev.speedcoding.main.Main;
  * / Copyrighted by FrameDev
  */
 
-public class Setup {
+public class SetupManager {
 
     private final Main plugin;
 
-    public Setup(Main plugin) {
+    public SetupManager(Main plugin) {
         this.plugin = plugin;
         setupCommands();
         setupListeners();

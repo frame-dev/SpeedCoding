@@ -3,7 +3,7 @@ package de.framedev.speedcoding.main;
 import de.framedev.speedcoding.managers.KitManager;
 import de.framedev.speedcoding.managers.MultiWorldManager;
 import de.framedev.speedcoding.managers.VaultManager;
-import de.framedev.speedcoding.utils.Setup;
+import de.framedev.speedcoding.managers.SetupManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,7 +18,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        new Setup(this);
+        new SetupManager(this);
         new KitManager().createCustomConfig();
         
         if (Bukkit.getPluginManager().getPlugin("Vault") != null)
