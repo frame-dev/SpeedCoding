@@ -1,5 +1,6 @@
 package de.framedev.speedcoding.main;
 
+import de.framedev.speedcoding.commands.BackPackCMD;
 import de.framedev.speedcoding.managers.KitManager;
 import de.framedev.speedcoding.managers.MultiWorldManager;
 import de.framedev.speedcoding.managers.VaultManager;
@@ -20,17 +21,20 @@ public final class Main extends JavaPlugin {
 
         new SetupManager(this);
         new KitManager().createCustomConfig();
+        new BackPackCMD(this);
         
         if (Bukkit.getPluginManager().getPlugin("Vault") != null)
             vaultManager = new VaultManager(this);
 
         // Worlds Regenerate / Reloading
         MultiWorldManager.startWorlds();
+
+        BackPackCMD.loadBackpacks();
     }
 
     @Override
     public void onDisable() {
-
+        BackPackCMD.saveBackpacks();
     }
 
     public VaultManager getVaultManager() {
