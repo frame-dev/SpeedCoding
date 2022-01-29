@@ -1,10 +1,6 @@
 package de.framedev.speedcoding.managers;
 
-import de.framedev.speedcoding.commands.ChatClearCMD;
-import de.framedev.speedcoding.commands.EconomyCMD;
-import de.framedev.speedcoding.commands.HomeCMD;
-import de.framedev.speedcoding.commands.KitCMD;
-import de.framedev.speedcoding.commands.WorldCMD;
+import de.framedev.speedcoding.commands.*;
 import de.framedev.speedcoding.listeners.PlayerListeners;
 import de.framedev.speedcoding.main.Main;
 
@@ -33,6 +29,7 @@ public class SetupManager {
         new HomeCMD(plugin);
         new EconomyCMD(plugin);
         new KitCMD(plugin);
+        new BackPackCMD(plugin);
     }
 
     private void setupListeners() {

@@ -21,20 +21,18 @@ public final class Main extends JavaPlugin {
 
         new SetupManager(this);
         new KitManager().createCustomConfig();
-        new BackPackCMD(this);
         
         if (Bukkit.getPluginManager().getPlugin("Vault") != null)
             vaultManager = new VaultManager(this);
 
         // Worlds Regenerate / Reloading
         MultiWorldManager.startWorlds();
-
-        BackPackCMD.loadBackpacks();
+        BackPackCMD.loadBackPacks();
     }
 
     @Override
     public void onDisable() {
-        BackPackCMD.saveBackpacks();
+        BackPackCMD.saveBackPacks();
     }
 
     public VaultManager getVaultManager() {

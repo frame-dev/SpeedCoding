@@ -22,3 +22,5 @@ commands:
       - bal
   kits:
   backpack:
+    aliases:
+      - bp

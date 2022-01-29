@@ -26,8 +26,8 @@ import java.util.Map;
 /**
  * / This Plugin was Created by FrameDev
  * / Package : de.framedev.speedcoding.commands
- * / ClassName BackpackCMD
- * / Date: 07.12.21
+ * / ClassName BackPackCMD
+ * / Date: 29.01.22
  * / Project: SpeedCoding
  * / Copyrighted by FrameDev
  */
@@ -42,12 +42,12 @@ public class BackPackCMD implements CommandExecutor {
     public BackPackCMD(Main plugin) {
         this.plugin = plugin;
         playerBackpack = new HashMap<>();
-        plugin.getCommand("backpack").setExecutor(this);
         file = new File(plugin.getDataFolder(), "backpacks.yml");
         cfg = YamlConfiguration.loadConfiguration(file);
+        plugin.getCommand("backpack").setExecutor(this::onCommand);
     }
 
-    public static void loadBackpacks() {
+    public static void loadBackPacks() {
         for (OfflinePlayer player : Bukkit.getOfflinePlayers()) {
             if (cfg.contains(player.getName())) {
                 String inventory = cfg.getString(player.getName());
@@ -56,10 +56,11 @@ public class BackPackCMD implements CommandExecutor {
         }
     }
 
-    public static void saveBackpacks() {
+    public static void saveBackPacks() {
         for (Map.Entry<OfflinePlayer, Inventory> entry : playerBackpack.entrySet()) {
             cfg.set(entry.getKey().getName(), inventoryToBase64(entry.getValue()));
         }
+
         try {
             cfg.save(file);
         } catch (IOException e) {
